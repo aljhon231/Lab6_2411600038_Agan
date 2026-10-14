@@ -37,7 +37,7 @@ in VS Code to work directly with the app.
 
 ## Run locally
 
-From the `Laravel/` folder:
+From the repository root:
 
 ```sh
 cd Laravel
