@@ -16,7 +16,7 @@ php artisan serve --host=127.0.0.1 --port=8001
 ```
 
 Open `http://127.0.0.1:8001`. Port 8001 avoids conflict with the other Lab
-project using port 8000. SQLite is the default database.
+project using port 8000. SQLite is the default database for a fresh checkout.
 
 Register a student account from the login page. To grant administrator access
 to a registered user, run this command from the project folder:
@@ -50,7 +50,9 @@ php artisan test
 
 ## Lab 6 submission
 
-The report and evidence screenshots are in `submission/`. The application uses
-SQLite by default; use `php artisan db:show` and `php artisan migrate:status` to
-inspect its database. phpMyAdmin only manages the separate local MySQL server,
-so it cannot display this SQLite database.
+The report and evidence screenshots are in `submission/`. The current local
+evidence run uses the dedicated MySQL database `lab6_student_portal`; in
+phpMyAdmin, open that database, select `courses`, and choose **Browse**. The
+course rows are also captured in
+`submission/screenshots/10-mysql-courses.png`. Fresh checkouts still use SQLite
+unless their local `.env` selects another database connection.
